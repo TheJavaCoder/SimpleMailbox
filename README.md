@@ -1,4 +1,4 @@
-<a href="http://dev.bukkit.org/media/images/57/603/name.png" rel="">![Image](http://dev.bukkit.org/media/images/57/603/name.png)]</a>  
+![Image](http://dev.bukkit.org/media/images/57/603/name.png) 
 ##
 
 ### SimpleMailBox ###
