@@ -49,10 +49,8 @@ public class MailListener implements Listener {
 		if(e.getAction() == Action.LEFT_CLICK_BLOCK || e.getAction() == Action.RIGHT_CLICK_BLOCK) {
 			Block block = e.getClickedBlock();
 			Block blockbelow = block.getRelative(BlockFace.DOWN);
-			Block blockleftside = block.getRelative(BlockFace.EAST);
-			Block blockrightside = block.getRelative(BlockFace.WEST);
 			//Location loc = e.getClickedBlock().getLocation();
-			if(block.getType().equals(Material.LOG) && blockbelow.getType().equals(Material.FENCE) && blockleftside.getType().equals(Material.AIR) && blockrightside.getType().equals(Material.AIR)) {
+			if(block.getType().equals(Material.LOG) && blockbelow.getType().equals(Material.FENCE)) {
 				if(block.getLocation().getBlockY() == plugin.getConfig().getInt("MailBoxs." + p.getWorld().getName() + "." + p.getName() + ".y") && block.getLocation().getBlockX() == plugin.getConfig().getInt("MailBoxs." + p.getWorld().getName() + "." + p.getName() + ".x") && block.getLocation().getBlockZ() == plugin.getConfig().getInt("MailBoxs." + p.getWorld().getName() + "." + p.getName() + ".z")){
 					if(plugin.getConfig().contains("MailBoxs." + p.getWorld().getName() + "." + p.getName() + ".books")) {
 						List<?> books = plugin.getConfig().getList("MailBoxs." + p.getWorld().getName() + "." + p.getName() + ".books");
@@ -109,7 +107,7 @@ public class MailListener implements Listener {
 					            }
 					            
 					            
-					            	
+					            br.close();
 					            in.close();	
 					            file.delete();
 					        }
@@ -143,11 +141,7 @@ public class MailListener implements Listener {
 		if(e.getAction() == Action.LEFT_CLICK_BLOCK) {
 		Block block = e.getClickedBlock();
 		Block blockbelow = block.getRelative(BlockFace.DOWN);
-		Block blockleftside = block.getRelative(BlockFace.EAST);
-		Block blockrightside = block.getRelative(BlockFace.WEST);
-		Block blockup = block.getRelative(BlockFace.UP);
-		Block ground = blockbelow.getRelative(BlockFace.DOWN);
-			if(block.getType() == Material.LOG && blockbelow.getType() == Material.FENCE && blockleftside.getType() == Material.AIR && blockrightside.getType() == Material.AIR && blockup.getType() == Material.AIR && ground.getType() != Material.AIR) {
+			if(block.getType() == Material.LOG && blockbelow.getType() == Material.FENCE) {
 				
 				if(block.getLocation().getBlockY() != plugin.getConfig().getInt("MailBoxs." + player.getWorld().getName() + "." + player.getName() + ".y") && block.getLocation().getBlockX() != plugin.getConfig().getInt("MailBoxs." + player.getWorld().getName() + "." + player.getName() + ".x") && block.getLocation().getBlockZ() != plugin.getConfig().getInt("MailBoxs." + player.getWorld().getName() + "." + player.getName() + ".z")) {
 					

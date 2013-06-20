@@ -1,13 +1,15 @@
 package me.The_Coder.SimpleMail.Listeners;
 
+import java.util.Set;
+
 import me.The_Coder.SimpleMail.main;
-
-
+import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.block.Block;
 import org.bukkit.block.BlockFace;
+import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -54,22 +56,31 @@ public class BoxListener implements Listener{
 		@EventHandler
 		public void mailboxbreak(BlockBreakEvent e) {
 			Player p = e.getPlayer();
-			Block blockplace = e.getBlock();
-			Block blockbelow = blockplace.getRelative(BlockFace.DOWN);
-			Block blockleftside = blockplace.getRelative(BlockFace.EAST);
-			Block blockrightside = blockplace.getRelative(BlockFace.WEST);
-			Block blockup = blockplace.getRelative(BlockFace.UP);
-			Block ground = blockbelow.getRelative(BlockFace.DOWN);
+			Block blockbreak = e.getBlock();
+			Block blockbelow = blockbreak.getRelative(BlockFace.DOWN);
+			Block blockup = blockbreak.getRelative(BlockFace.UP);
 			Location blockbroken = e.getBlock().getLocation();
-			if(blockplace.getType() == Material.LOG && blockbelow.getType() == Material.FENCE && blockleftside.getType() == Material.AIR && blockrightside.getType() == Material.AIR && blockup.getType() == Material.AIR && ground.getType() != Material.AIR || blockplace.getType() == Material.FENCE && blockup.getType() == Material.LOG) {
-				if(blockbroken.getY() == plugin.getConfig().getInt("MailBoxs." + p.getWorld().getName() + "." + p.getName() + ".y") && blockbroken.getZ() == plugin.getConfig().getInt("MailBoxs." + p.getWorld().getName() + "." + p.getName() + ".z") && blockbroken.getX() == plugin.getConfig().getInt("MailBoxs." + p.getWorld().getName() + "." + p.getName() + ".x") || blockbroken.getBlockY() == plugin.getConfig().getInt("MailBoxs." + p.getWorld().getName() + "." + p.getName() + ".y")-1 && blockbroken.getZ() == plugin.getConfig().getInt("MailBoxs." + p.getWorld().getName() + "." + p.getName() + ".z") && blockbroken.getX() == plugin.getConfig().getInt("MailBoxs." + p.getWorld().getName() + "." + p.getName() + ".x")){
+			if(blockbreak.getType() == Material.LOG && blockbelow.getType() == Material.FENCE || blockbreak.getType() == Material.FENCE && blockup.getType() == Material.LOG) {
+				if(blockbroken.getY() == plugin.getConfig().getInt("MailBoxs." + p.getWorld().getName() + "." + p.getName() + ".y") && blockbroken.getZ() == plugin.getConfig().getInt("MailBoxs." + p.getWorld().getName() + "." + p.getName() + ".z") && blockbroken.getX() == plugin.getConfig().getInt("MailBoxs." + p.getWorld().getName() + "." + p.getName() + ".x") ||
+						blockbroken.getBlockY() == plugin.getConfig().getInt("MailBoxs." + p.getWorld().getName() + "." + p.getName() + ".y")-1 && blockbroken.getZ() == plugin.getConfig().getInt("MailBoxs." + p.getWorld().getName() + "." + p.getName() + ".z") - 1 && blockbroken.getX() == plugin.getConfig().getInt("MailBoxs." + p.getWorld().getName() + "." + p.getName() + ".x") - 1 ){
 					p.sendMessage("[MailBox]: " + ChatColor.GREEN + "You deleted your mailbox!");
 					plugin.getConfig().set("MailBoxs." + p.getWorld().getName() + "." + p.getName(), null);
 					plugin.saveConfig();
 				}else {
-					p.sendMessage("[MailBox]: " + ChatColor.RED + "You can't destroy that players mailbox");
-					e.setCancelled(true);
+					
+					ConfigurationSection sec = plugin.getConfig().getConfigurationSection(
+							"MailBoxs." + p.getWorld().getName());
 
+					Set<String> players = sec.getKeys(false);
+
+					for (String pl : players) {
+						Player play = Bukkit.getServer().getPlayer(pl);
+						
+						if (sec.getInt(play.getName() + ".y") == blockbroken.getY() && sec.getInt(play.getName() + ".x") == blockbroken.getX() && sec.getInt(play.getName() + ".z") == blockbroken.getZ() || sec.getInt(play.getName() + ".y") - 1 == blockbroken.getY()) {
+								p.sendMessage("[MailBox]: " + ChatColor.RED + "You can't destroy that players mailbox");
+								e.setCancelled(true);
+						}
+					}
 				}
 			}
 		}
