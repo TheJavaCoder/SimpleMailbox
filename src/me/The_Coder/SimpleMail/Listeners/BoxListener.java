@@ -21,7 +21,7 @@ public class BoxListener implements Listener{
 	
 	main plugin;
 
-    //contrustor
+    //contrustor to main class
 	public BoxListener (main Main) {
 		
 		plugin = Main;
