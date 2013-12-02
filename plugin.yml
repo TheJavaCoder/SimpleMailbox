@@ -1,0 +1,5 @@
+name: SimpleMailBox
+main: me.The_Coder.SimpleMail.main
+version: 0.1
+description: >
+             Allows players to create mailboxes
