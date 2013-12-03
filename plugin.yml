@@ -1,0 +1,13 @@
+<<<<<<< HEAD
+name: SimpleMailBox
+main: me.The_Coder.SimpleMail.main
+version: 0.1
+description: >
+             Allows players to create mailboxes
+=======
+name: SimpleMailBox
+main: me.The_Coder.SimpleMail.main
+version: 0.1
+description: >
+             Allows players to create mailboxes
+>>>>>>> 49cafe4ff463937bb0ff81e2e1d5c6ce189c4fb0
