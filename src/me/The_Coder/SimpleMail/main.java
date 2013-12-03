@@ -7,7 +7,9 @@ import me.The_Coder.SimpleMail.Listeners.BoxListener;
 import me.The_Coder.SimpleMail.Listeners.GotMailListener;
 import me.The_Coder.SimpleMail.Listeners.MailListener;
 
+
 import org.bukkit.plugin.java.JavaPlugin;
+
 
 
 public class main extends JavaPlugin{
