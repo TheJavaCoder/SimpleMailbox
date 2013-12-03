@@ -236,8 +236,6 @@ public class MailListener implements Listener {
 					}else {
 						player.sendMessage("[MailBox]: " + ChatColor.RED + "You must write a letter first...");
 					}
-				}else {
-					
 				}
 			}
 		}
