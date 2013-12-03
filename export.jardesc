@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?xml version="1.0" encoding="WINDOWS-1252" standalone="no"?>
 <jardesc>
     <jar path="C:/Users/Bailey/workspace/bukkit/plugins/SimpleMailbox.jar"/>
@@ -17,3 +18,24 @@
         <file path="/SimpleMailbox/.project"/>
     </selectedElements>
 </jardesc>
+=======
+<?xml version="1.0" encoding="WINDOWS-1252" standalone="no"?>
+<jardesc>
+    <jar path="C:/Users/Bailey/workspace/bukkit/plugins/SimpleMailbox.jar"/>
+    <options buildIfNeeded="true" compress="true" descriptionLocation="/SimpleMailbox/export.jardesc" exportErrors="true" exportWarnings="true" includeDirectoryEntries="false" overwrite="false" saveDescription="true" storeRefactorings="false" useSourceFolders="false"/>
+    <storedRefactorings deprecationInfo="true" structuralOnly="false"/>
+    <selectedProjects/>
+    <manifest generateManifest="true" manifestLocation="" manifestVersion="1.0" reuseManifest="false" saveManifest="false" usesManifest="true">
+        <sealing sealJar="false">
+            <packagesToSeal/>
+            <packagesToUnSeal/>
+        </sealing>
+    </manifest>
+    <selectedElements exportClassFiles="true" exportJavaFiles="false" exportOutputFolder="false">
+        <file path="/SimpleMailbox/plugin.yml"/>
+        <file path="/SimpleMailbox/.classpath"/>
+        <javaElement handleIdentifier="=SimpleMailbox/src"/>
+        <file path="/SimpleMailbox/.project"/>
+    </selectedElements>
+</jardesc>
+>>>>>>> 49cafe4ff463937bb0ff81e2e1d5c6ce189c4fb0
