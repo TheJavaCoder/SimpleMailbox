@@ -2,6 +2,11 @@
 .classpath
 .project
 .settings/
+/.classpath
+/.settings
+/target
+/bin
+/dependency-reduced-pom.xml
 
 # Netbeans
 nbproject
@@ -33,7 +38,8 @@ target/
 *.ipr
 *.iws
 .idea/
-
+/.idea
+/*.iml
 .checkstyle
 
 # Testfiles
