@@ -2,16 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fba8077e-ae4f-4da0-94fa-9c3361c3083c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/me/The_Coder/SimpleMail/Listeners/BoxListener.java" afterPath="$PROJECT_DIR$/src/me/The_Coder/SimpleMail/Listeners/BoxListener.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/me/The_Coder/SimpleMail/Listeners/GotMailListener.java" afterPath="$PROJECT_DIR$/src/me/The_Coder/SimpleMail/Listeners/GotMailListener.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/me/The_Coder/SimpleMail/Listeners/MailListener.java" afterPath="$PROJECT_DIR$/src/me/The_Coder/SimpleMail/Listeners/MailListener.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SimpleMailbox.iml" afterPath="$PROJECT_DIR$/SimpleMailbox.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/me/The_Coder/SimpleMail/main.java" afterPath="$PROJECT_DIR$/src/me/The_Coder/SimpleMail/main.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="SimpleMailbox.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="fba8077e-ae4f-4da0-94fa-9c3361c3083c" time="1386023354209" ignored="false" />
+    <file path="/Dummy.txt" changelist="fba8077e-ae4f-4da0-94fa-9c3361c3083c" time="1386030138463" ignored="false" />
     <file path="/SignListener.java" changelist="fba8077e-ae4f-4da0-94fa-9c3361c3083c" time="1386017475214" ignored="false" />
     <file path="/BoxListener.java" changelist="fba8077e-ae4f-4da0-94fa-9c3361c3083c" time="1386023375401" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -385,7 +380,11 @@
       <created>1386023356836</created>
       <updated>1386023356836</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Crap!!">
+      <created>1386030144636</created>
+      <updated>1386030144636</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -476,7 +475,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="edited a comment" />
+    <option name="LAST_COMMIT_MESSAGE" value="Crap!!" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -493,6 +492,7 @@
     <MESSAGE value="Clean up work" />
     <MESSAGE value="Breaking a player's box" />
     <MESSAGE value="edited a comment" />
+    <MESSAGE value="Crap!!" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
