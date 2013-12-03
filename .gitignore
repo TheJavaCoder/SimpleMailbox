@@ -1,7 +1,40 @@
-SimpleMailbox.iml
-.idea
-.settings
+# Eclipse stuff
 .classpath
 .project
-.jardesc
-bin/
+.settings/
+
+# Netbeans
+nbproject
+
+# maven
+/*/target/
+target/
+
+#gradle
+.gradle/
+
+# vim
+.*.sw[a-p]
+
+# various other potential build files
+/*/build/
+/buildassets/map_*.txt
+/*/bin/
+/*/dist/
+/*/manifest.mf
+/release
+
+# Mac filesystem dust
+.DS_Store
+
+
+# Intellij
+*.iml
+*.ipr
+*.iws
+.idea/
+
+.checkstyle
+
+# Testfiles
+test.sh
