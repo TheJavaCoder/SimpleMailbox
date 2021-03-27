@@ -1,4 +1,4 @@
-![Image](http://dev.bukkit.org/media/images/57/603/name.png) 
+![Image](https://raw.githubusercontent.com/TheJavaCoder/SimpleMailbox/main/hand.png) 
 ##
 
 ### SimpleMailBox ###
